@@ -38,35 +38,8 @@ export const ProjectSummary = ({
   const phoneSizes = `(max-width: ${media.tablet}px) 30vw, 20vw`;
   const laptopSizes = `(max-width: ${media.tablet}px) 80vw, 40vw`;
 
-  const renderKatakana = (device, visible) => (
-    <svg
-      aria-hidden="true"
-      width="750"
-      height="137"
-      viewBox="0 0 750 137"
-      data-visible={visible}
-      data-light={theme.themeId === 'light'}
-      style={cssProps({ opacity: svgOpacity })}
-      className={styles.svg}
-      data-device={device}
-    >
-      <use href={`${projectKatakana}#katakana-project`} />
-    </svg>
-  );
-
   const renderDetails = visible => (
     <div className={styles.details}>
-      <div aria-hidden className={styles.index}>
-        <Divider
-          notchWidth="64px"
-          notchHeight="8px"
-          collapsed={!visible}
-          collapseDelay={1000}
-        />
-        <span className={styles.indexNumber} data-visible={visible}>
-          {indexText}
-        </span>
-      </div>
       <Heading
         level={3}
         as="h2"
@@ -112,7 +85,6 @@ export const ProjectSummary = ({
       )}
       {model.type === 'phone' && (
         <>
-          {renderKatakana('phone', visible)}
           <div className={styles.model} data-device="phone">
             <Model
               alt={model.alt}

@@ -88,10 +88,9 @@ export const Home = () => {
         description="A comprohensive, opensourced hackathon organization platform written in javascript, designed to streamline hackathon organization and 
         user experience."
         buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        buttonLink="/projects/hacksc"
         model={{
           type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
           textures: [
             {
               srcSet: [HackSC],
@@ -106,13 +105,13 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
+        title="Wave: Musical Dating"
+        description="Interactive dating ios app based on musical taste, personality, and location. Integrated machine learning 
+         models using supervised learning techniques to pair and match users."
+        buttonText="View project"
         buttonLink="https://gamestack.hamishw.com"
         model={{
           type: 'phone',
-          alt: 'App login screen',
           textures: [
             {
               srcSet: [gamestackTexture, gamestackTextureLarge],
@@ -127,16 +126,15 @@ export const Home = () => {
       />
       <ProjectSummary
         id="project-3"
+        alternate
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title="Checkout my other personal projects here!"
+        buttonText="View all personal projects"
+        buttonLink="/projects/other_projects"
         model={{
           type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
           textures: [
             {
               srcSet: [sliceTexture, sliceTextureLarge],
@@ -145,8 +143,6 @@ export const Home = () => {
           ],
         }}
       />
-
-      <Footer />
     </div>
   );
 };

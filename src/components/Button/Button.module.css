@@ -28,7 +28,7 @@
     transition-property: opacity, color, background;
     transition-duration: var(--durationM);
     transition-timing-function: var(--bezierFastoutSlowin);
-    background: rgb(var(--rgbPrimary));
+    background: var(--colorTextTitle);
     position: absolute;
     inset: 0;
     z-index: -1;
