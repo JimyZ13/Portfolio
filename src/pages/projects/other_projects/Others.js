@@ -53,9 +53,11 @@ import { ThemeProvider, useTheme } from 'components/ThemeProvider';
 import { useAppContext } from 'hooks';
 import {
   ProjectBackground,
+  ProjectIntro,
   ProjectContainer,
   ProjectHeader,
   ProjectImage,
+  OtherProjectHeader,
   ProjectSection,
   ProjectSectionColumns,
   ProjectSectionContent,
@@ -68,18 +70,20 @@ import { media } from 'utils/style';
 import styles from './Others.module.css';
 
 const title =
-  'This is an collection of finished projects that are no longer deployed for monetary reasons : (';
+  'This is an collection of finished projects that are no longer deployed because AWS is so expensive :(';
 const description =
-  'I used many of these projects to learn about new technology and produced industrial level full stack web applications and android applications. Feel free to check out the source codes of each prject on github.';
-const roles = [
-  'Fullstack Development',
-  'Recommendation Systems',
+  'I used many of these projects to learn about new technology and produced industrial level full stack web applications and android applications. Feel free to check out the source codes of each prject on github!';
+
+const twitchTitle =
+  'Video- : an twitching stream personalization platform with favorite functionality and personalized recommendation';
+const twitchDescription =
+  'I built this web application to address the lack of personalized content and customization on twtich. Video- is an app where the entire app is customaized to the liking of the user including content recommendation and favorite streamers.';
+const twitchRoles = [
   'Spring MVC',
-  'Go Lang',
-  'React, Vue, Next',
-  'mySQL, MongoDB, DynamoDB',
-  'AWS, GCP',
-  '...etc...',
+  'React.js',
+  'MySQL + AWS RDS',
+  'AWS EC2',
+  'RESTful Api',
 ];
 
 export const Others = () => {
@@ -95,25 +99,21 @@ export const Others = () => {
 
   return (
     <Fragment>
+      <ProjectIntro title={title} description={description} />
       <ProjectContainer className="spr">
         <Meta title={title} prefix="Projects" description={description} />
-        <ProjectHeader
-          title={title}
-          description={description}
+        <OtherProjectHeader
+          title={twitchTitle}
+          description={twitchDescription}
           url="https://hacksc.com/"
-          roles={roles}
+          roles={twitchRoles}
         />
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
+            <ProjectSectionHeading>Personalized Recommendation</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              In the project Video- I used content-based recommendation techiniques to
+              personalize content recommendation for users
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>

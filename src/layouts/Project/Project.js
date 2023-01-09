@@ -8,14 +8,86 @@ import { Transition } from 'components/Transition';
 import { useParallax } from 'hooks';
 import { forwardRef, useRef } from 'react';
 import { classes, cssProps, msToNum, numToMs } from 'utils/style';
+import { DecoderText } from 'components/DecoderText';
 import styles from './Project.module.css';
 
 const initDelay = 300;
+
+export function ProjectIntro({ title, description, className }) {
+  return (
+    <Section className={classes(styles.header, className)} as="section">
+      <div
+        className={styles.headerContent}
+        style={cssProps({ initDelay: numToMs(initDelay) })}
+      >
+        <div className={styles.details}>
+          <Heading className={styles.title} level={2} as="h1">
+            {<DecoderText text={title} delay={initDelay} />}
+          </Heading>
+          <Text className={styles.description} size="xl" as="p">
+            {description}
+          </Text>
+        </div>
+      </div>
+    </Section>
+  );
+}
 
 export function ProjectHeader({
   title,
   description,
   linkLabel = 'Visit website',
+  url,
+  roles,
+  className,
+}) {
+  return (
+    <Section className={classes(styles.header, className)} as="section">
+      <div
+        className={styles.headerContent}
+        style={cssProps({ initDelay: numToMs(initDelay) })}
+      >
+        <div className={styles.details}>
+          <Heading className={styles.title} level={2} as="h1">
+            {title}
+          </Heading>
+          <Text className={styles.description} size="xl" as="p">
+            {description}
+          </Text>
+          {!!url && (
+            <Button
+              secondary
+              iconHoverShift
+              className={styles.linkButton}
+              icon="chevronRight"
+              href={url}
+            >
+              {linkLabel}
+            </Button>
+          )}
+        </div>
+        {!!roles?.length && (
+          <ul className={styles.meta}>
+            {roles?.map((role, index) => (
+              <li
+                className={styles.metaItem}
+                style={cssProps({ delay: numToMs(initDelay + 300 + index * 140) })}
+                key={role}
+              >
+                <Text secondary>{role}</Text>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+    </Section>
+  );
+}
+
+export function OtherProjectHeader({
+  title,
+  description,
+  linkLabel = 'View Github Source Code',
   url,
   roles,
   className,
