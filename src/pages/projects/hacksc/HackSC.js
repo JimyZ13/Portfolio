@@ -1,48 +1,6 @@
-import backgroundSprLarge from 'assets/spr-background-large.jpg';
-import backgroundSprPlaceholder from 'assets/spr-background-placeholder.jpg';
-import imageSprBackgroundVolcanismLarge from 'assets/spr-background-volcanism-large.jpg';
-import imageSprBackgroundVolcanismPlaceholder from 'assets/spr-background-volcanism-placeholder.jpg';
-import imageSprBackgroundVolcanism from 'assets/spr-background-volcanism.jpg';
-import backgroundSpr from 'assets/spr-background.jpg';
-import imageSprComponentsDarkLarge from 'assets/spr-components-dark-large.png';
-import imageSprComponentsDarkPlaceholder from 'assets/spr-components-dark-placeholder.png';
-import imageSprComponentsDark from 'assets/spr-components-dark.png';
-import imageSprComponentsLightLarge from 'assets/spr-components-light-large.png';
-import imageSprComponentsLightPlaceholder from 'assets/spr-components-light-placeholder.png';
-import imageSprComponentsLight from 'assets/spr-components-light.png';
-import imageSprDesignSystemDarkLarge from 'assets/spr-design-system-dark-large.png';
-import imageSprDesignSystemDarkPlaceholder from 'assets/spr-design-system-dark-placeholder.png';
-import imageSprDesignSystemDark from 'assets/spr-design-system-dark.png';
-import imageSprDesignSystemLightLarge from 'assets/spr-design-system-light-large.png';
-import imageSprDesignSystemLightPlaceholder from 'assets/spr-design-system-light-placeholder.png';
-import imageSprDesignSystemLight from 'assets/spr-design-system-light.png';
-import imageSprLessonBuilderDarkLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import imageSprLessonBuilderDarkPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import imageSprLessonBuilderDark from 'assets/spr-lesson-builder-dark.jpg';
-import imageSprLessonBuilderLightLarge from 'assets/spr-lesson-builder-light-large.jpg';
-import imageSprLessonBuilderLightPlaceholder from 'assets/spr-lesson-builder-light-placeholder.jpg';
-import imageSprLessonBuilderLight from 'assets/spr-lesson-builder-light.jpg';
-import videoSprMotionLarge from 'assets/spr-motion-large.mp4';
-import videoSprMotionPlaceholder from 'assets/spr-motion-placeholder.jpg';
-import videoSprMotion from 'assets/spr-motion.mp4';
-import imageSprSchema1DarkLarge from 'assets/spr-schema-1-dark-large.png';
-import imageSprSchema1DarkPlaceholder from 'assets/spr-schema-1-dark-placeholder.png';
-import imageSprSchema1Dark from 'assets/spr-schema-1-dark.png';
-import imageSprSchema1LightLarge from 'assets/spr-schema-1-light-large.png';
-import imageSprSchema1LightPlaceholder from 'assets/spr-schema-1-light-placeholder.png';
-import imageSprSchema1Light from 'assets/spr-schema-1-light.png';
-import imageSprSchema2DarkLarge from 'assets/spr-schema-2-dark-large.png';
-import imageSprSchema2DarkPlaceholder from 'assets/spr-schema-2-dark-placeholder.png';
-import imageSprSchema2Dark from 'assets/spr-schema-2-dark.png';
-import imageSprSchema2LightLarge from 'assets/spr-schema-2-light-large.png';
-import imageSprSchema2LightPlaceholder from 'assets/spr-schema-2-light-placeholder.png';
-import imageSprSchema2Light from 'assets/spr-schema-2-light.png';
-import imageSprStoryboarderDarkLarge from 'assets/spr-storyboarder-dark-large.png';
-import imageSprStoryboarderDarkPlaceholder from 'assets/spr-storyboarder-dark-placeholder.png';
-import imageSprStoryboarderDark from 'assets/spr-storyboarder-dark.png';
-import imageSprStoryboarderLightLarge from 'assets/spr-storyboarder-light-large.png';
-import imageSprStoryboarderLightPlaceholder from 'assets/spr-storyboarder-light-placeholder.png';
-import imageSprStoryboarderLight from 'assets/spr-storyboarder-light.png';
+import HackSCMainPage from 'assets/HackSCMainPage.png';
+import HackSCStorybook from 'assets/HackSCStorybook.png';
+import HackSCAdminUI from 'assets/HackSCAdminUI.png';
 import { Footer } from 'components/Footer';
 import { Image } from 'components/Image';
 import { Link } from 'components/Link';
@@ -102,32 +60,24 @@ export const HackSC = () => {
             <ProjectImage
               raised
               key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprLessonBuilderDark, imageSprLessonBuilderDarkLarge]
-                  : [imageSprLessonBuilderLight, imageSprLessonBuilderLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprLessonBuilderDarkPlaceholder
-                  : imageSprLessonBuilderLightPlaceholder
-              }
+              srcSet={[HackSCMainPage, HackSCMainPage]}
+              placeholder={[HackSCMainPage, HackSCMainPage]}
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-              alt="The aero lesson builder app dragging an audio component into a screen about plant cells."
             />
           </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The problem</ProjectSectionHeading>
+            <ProjectSectionHeading>Project Intiative</ProjectSectionHeading>
             <ProjectSectionText>
-              In 2017, Smart Sparrow began a project to build an entirely new platform to
-              from the ground up to serve as the most powerful tool for educators to
-              create online learning experiences. The old platform was built in Flash, and
-              there were a number of user experience problems to solve in the process of
-              moving the platform to Javascript. The primary goals for the project were
-              reducing barriers to collaboration, and making the platform both easier for
-              new users, but with plenty of room to scale for advanced users.
+              HackSC was founded in USC with the purpose of providing better, more
+              engaging, and more functional tools for hosting hackathons. With this
+              mission we have hosted three hackathons since 2020 and now aim to open
+              source all the tools that we use in planning and hosting a hackathon. By
+              imporving scalability of our management systems, building an SSO system from
+              scratch, and adding to the evergrowing functionality of our platform,
+              project Hibiscus will provide a accessible platform for anyone to host a
+              hackathon.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -135,199 +85,97 @@ export const HackSC = () => {
           <ProjectSectionContent>
             <Image
               key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprComponentsDark, imageSprComponentsDarkLarge]
-                  : [imageSprComponentsLight, imageSprComponentsLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprComponentsDarkPlaceholder
-                  : imageSprComponentsLightPlaceholder
-              }
+              srcSet={[HackSCAdminUI, HackSCAdminUI]}
+              placeholder={[HackSCAdminUI, HackSCAdminUI]}
               alt={`A set of ${themeId} themed components for the aero design system`}
               sizes="100vw"
             />
             <ProjectTextRow>
-              <SegmentedControl
-                currentIndex={themes.indexOf(themeId)}
-                onChange={handleThemeChange}
-              >
-                <SegmentedControlOption>Dark theme</SegmentedControlOption>
-                <SegmentedControlOption>Light theme</SegmentedControlOption>
-              </SegmentedControl>
-            </ProjectTextRow>
-            <ProjectTextRow>
-              <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
+              <ProjectSectionHeading>
+                The admin portal and functionalities
+              </ProjectSectionHeading>
               <ProjectSectionText>
-                To streamline the design process across designers and engineers for such a
-                large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product’s development
-                cycle. This would inform both the aesthetics and user experience across
-                the product itself as well as the website and marketing material.
+                Personally, I worked on adding and perfecting functions to the
+                administrator portal of project Hibiscus. Using Next.js 13, our
+                engineering team were able to create a responsive ui with the
+                functionality of organizing teams in a hackathon. Through the hacker
+                portal, hackers can create, join, or request to be part of a team. By
+                using routing and SSR techiniques in Next.js and Express, these
+                functionalities can be easily repurposed for an open sourced project.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <Image
-              raised
-              key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprDesignSystemDark, imageSprDesignSystemDarkLarge]
-                  : [imageSprDesignSystemLight, imageSprDesignSystemLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprDesignSystemDarkPlaceholder
-                  : imageSprDesignSystemLightPlaceholder
-              }
-              alt="The homepage of the aero design system docs website linking to principles and components."
-              sizes="100vw"
-            />
-            <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
-              <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ThemeProvider themeId="dark" data-invert>
-          <ProjectSection
-            backgroundOverlayOpacity={0.5}
-            backgroundElement={
-              <Image
-                srcSet={[imageSprBackgroundVolcanism, imageSprBackgroundVolcanismLarge]}
-                placeholder={imageSprBackgroundVolcanismPlaceholder}
-                alt="A dramatic ocean scene with lava forming a new land mass."
-                sizes="100vw"
-              />
-            }
-          >
-            <ProjectSectionColumns width="full">
-              <ProjectSectionContent width="full">
-                <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Motion design</ProjectSectionHeading>
-                  <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
-                  </ProjectSectionText>
-                </ProjectTextRow>
-              </ProjectSectionContent>
-              <Image
-                raised
-                className={styles.video}
-                srcSet={[
-                  { src: videoSprMotion, width: 1280 },
-                  { src: videoSprMotionLarge, width: 2560 },
-                ]}
-                placeholder={videoSprMotionPlaceholder}
-                alt="A learning designer building and deploying an interactive lesson on volcanism using the app."
-                sizes={`(max-width: ${media.mobile}px) 100vw, 50vw`}
-              />
-            </ProjectSectionColumns>
-          </ProjectSection>
-        </ThemeProvider>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
-              <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
-              </ProjectSectionText>
-            </ProjectTextRow>
-            <Image
-              raised
-              key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprStoryboarderDark, imageSprStoryboarderDarkLarge]
-                  : [imageSprStoryboarderLight, imageSprStoryboarderLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprStoryboarderDarkPlaceholder
-                  : imageSprStoryboarderLightPlaceholder
-              }
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-            />
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionColumns>
-            <ProjectSectionContent>
-              <ProjectTextRow>
-                <ProjectSectionHeading>
-                  An extensible plugin ecosystem usable by everyone
-                </ProjectSectionHeading>
-                <ProjectSectionText>
-                  The most powerful aspect of the platform is the ability to create custom
-                  plugins for any content, whether it be a degree, course, lesson, screen,
-                  or interactive component. Out of the box these can be made configurable
-                  with minimal effort from developers. Learning designers can then edit
-                  everything using a common configuration interface.
-                </ProjectSectionText>
-              </ProjectTextRow>
-            </ProjectSectionContent>
-            <div className={styles.sidebarImages}>
-              <Image
-                className={styles.sidebarImage}
-                srcSet={
-                  isDark
-                    ? [imageSprSchema2Dark, imageSprSchema2DarkLarge]
-                    : [imageSprSchema2Light, imageSprSchema2LightLarge]
-                }
-                placeholder={
-                  isDark
-                    ? imageSprSchema2DarkPlaceholder
-                    : imageSprSchema2LightPlaceholder
-                }
-                alt="Configuration options for a component."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-              <Image
-                className={styles.sidebarImage}
-                srcSet={
-                  isDark
-                    ? [imageSprSchema1Dark, imageSprSchema1DarkLarge]
-                    : [imageSprSchema1Light, imageSprSchema1LightLarge]
-                }
-                placeholder={
-                  isDark
-                    ? imageSprSchema1DarkPlaceholder
-                    : imageSprSchema1LightPlaceholder
-                }
-                alt="Configuration options for text."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-            </div>
-          </ProjectSectionColumns>
         </ProjectSection>
 
         <ProjectSection>
           <ProjectSectionContent>
+            <ProjectTextRow>
+              <ProjectSectionHeading>
+                Log Server and Hacker Matching
+              </ProjectSectionHeading>
+              <ProjectSectionText>
+                Among our many applications in project Hibiscus, the log server stands as
+                an unique BaaS product that provides tracking for any event
+                organizization. By using milliesearch and express.js, we cosntructed a
+                standalone backend service that offers customizablecontent tracking that
+                is compatible with all major frontend frameworks. Using milliesearch and
+                docker containment, we also provide a easy automatic deployment image
+                generator that can automatically deploy project updates without server
+                side image rebuilding.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection light={isDark}>
+          <ProjectSectionContent>
+            <Image
+              key={themeId}
+              srcSet={[HackSCStorybook, HackSCStorybook]}
+              placeholder={[HackSCStorybook, HackSCStorybook]}
+              sizes="100vw"
+            />
+            <ProjectTextRow>
+              <ProjectSectionHeading>UI Components and Storybook</ProjectSectionHeading>
+              <ProjectSectionText>
+                To help others adopt our paltforms, we created a storybook for individual
+                components of our platform where users can browse through each component
+                template that we used in both our recruitment page and our UI for hacker
+                portal and administrator portal. These elements are also
+                compartimentalized for easy usage outside of the Hibiscus project.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection>
+          <ProjectSectionContent>
+            <ProjectTextRow>
+              <ProjectSectionHeading>Standarization and Deployment</ProjectSectionHeading>
+              <ProjectSectionText>
+                During the deployment phase of project Hibiscus, I was also part of the
+                team that standarized all our various applications and backend services
+                using Docker images and constructed customized image containers for safe
+                and universal deployment. Most of our application use the Next.js
+                framework and are deployed using the vercel webpack manager and deployment
+                tool. We also created automated scirpts for image generation to aid others
+                in deploying their projects if they based their systems on project
+                Hibiscus.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+
+        <ProjectSection light={isDark}>
+          <ProjectSectionContent>
             <ProjectTextRow center centerMobile noMargin>
               <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
               <ProjectSectionText>
-                Ultimately the project was successful after Smart Sparrow and the aero
-                platform were{' '}
-                <Link href="https://www.prnewswire.com/news-releases/pearson-acquires-interactive-learning-technology-from-smart-sparrow-300987673.html">
-                  acquired by Pearson in 2020
-                </Link>{' '}
-                to become a foundation for their next generation learning platform.
+                Overall our student organization is one of the largest hackathon orgs in
+                the US and we are continueing to host the HackSC 2023 hackathon this
+                Feburary. We released project Hibiscus in December 2022 and will continue
+                to contribute to the open source project as we enhance our hosting
+                functionalities and platforms.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
