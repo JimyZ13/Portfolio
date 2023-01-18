@@ -8,7 +8,8 @@
   padding: 0;
   width: var(--space2XL);
   position: fixed;
-  left: var(--spaceOuter);
+  left: 1%;
+  top: 93%;
   bottom: var(--spaceOuter);
   z-index: var(--zIndex4);
   isolation: isolate;

@@ -1,0 +1,23 @@
+.containerStyles {
+  height: 20px;
+  width: 100%;
+  background-color: rgb(var(--rgbBackground));
+  border-radius: 50px;
+}
+
+.fillerStyles {
+  height: 100%;
+  background-color: rgb(var(--rgbText));
+  border-radius: inherit;
+  text-align: right;
+}
+
+.labelStyles {
+  padding: 5px;
+  color: rgb(var(--rgbBackground));
+  font-weight: bold;
+}
+
+.border {
+  margin-bottom: 10px;
+}

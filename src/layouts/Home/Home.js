@@ -17,7 +17,11 @@ import { Intro } from 'layouts/Home/Intro';
 import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
 import { useEffect, useRef, useState } from 'react';
+import { Jobs } from 'layouts/Home/Jobs';
+import { Credits } from './Credits';
+import { Skills } from 'layouts/Home/Skills';
 import styles from './Home.module.css';
+import StarlinkMainPage from 'assets/StarlinkMainPage.png';
 
 const disciplines = ['Developer', 'Researcher', 'Student'];
 
@@ -79,6 +83,7 @@ export const Home = () => {
         visible={visibleSections.includes(details.current)}
         id="details"
       />
+      <Skills id="skills" />
       <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
@@ -109,7 +114,7 @@ export const Home = () => {
         description="Interactive dating ios app based on musical taste, personality, and location. Integrated machine learning 
          models using supervised learning techniques to pair and match users."
         buttonText="View project"
-        buttonLink="https://gamestack.hamishw.com"
+        buttonLink="/projects/wave"
         model={{
           type: 'phone',
           textures: [
@@ -137,12 +142,14 @@ export const Home = () => {
           type: 'laptop',
           textures: [
             {
-              srcSet: [sliceTexture, sliceTextureLarge],
+              srcSet: [StarlinkMainPage, StarlinkMainPage],
               placeholder: sliceTexturePlaceholder,
             },
           ],
         }}
       />
+      <Jobs id="experiences" />
+      <Credits id="credits" />
     </div>
   );
 };

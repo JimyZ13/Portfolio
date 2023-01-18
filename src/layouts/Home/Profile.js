@@ -40,10 +40,9 @@ const ProfileText = ({ visible, titleId }) => (
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       Please feel free to check out projects that I have worked on and consolidations of
       my work experience in the SDE industry and notes on subjects that I found
-      particularly helpful when working on these projects. Also special thanks to{' '}
-      <Link href="https://github.com/HamishMW">Hamish</Link> who's amazing UI design
-      inspired the layout of this webpage! Checkout the credits tab for detailed
-      information about how this website was built.
+      particularly helpful when working on these projects. Checkout the credits tab for
+      detailed information about how this website was built and some very helpful
+      resources that I used.
     </Text>
   </Fragment>
 );

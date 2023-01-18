@@ -148,7 +148,7 @@ export const Others = () => {
               <ProjectSectionText>
                 To streamline the design process across designers and engineers for such a
                 large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product’s development
+                flexible design system that could evolve during the product development
                 cycle. This would inform both the aesthetics and user experience across
                 the product itself as well as the website and marketing material.
               </ProjectSectionText>
