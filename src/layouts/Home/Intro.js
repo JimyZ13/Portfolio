@@ -22,7 +22,6 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   const theme = useTheme();
   const [disciplineIndex, setDisciplineIndex] = useState(0);
   const prevTheme = usePrevious(theme);
-  const currentDiscipline = disciplines.find((item, index) => index === disciplineIndex);
   const titleId = `${id}-title`;
   const scrollToHash = useScrollToHash();
   const [loopNum, setLoopNum] = useState(0);
@@ -40,7 +39,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
     return () => {
       clearInterval(ticker);
     };
-  }, [curText]);
+  });
 
   const tick = () => {
     let i = loopNum % words.length;

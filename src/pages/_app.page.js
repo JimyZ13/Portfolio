@@ -14,8 +14,6 @@ import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { Fragment, createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
-import { NewNav } from 'components/Navbar';
-import { ScrollRestore } from '../layouts/App/ScrollRestore';
 
 export const AppContext = createContext({});
 
