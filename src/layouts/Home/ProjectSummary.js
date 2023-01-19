@@ -83,6 +83,27 @@ export const ProjectSummary = ({
           </div>
         </>
       )}
+      {model.type === 'laptop2' && (
+        <>
+          <div className={styles.model} data-device="laptop">
+            <Model
+              alt={model.alt}
+              cameraPosition={{ x: 0.6, y: 0, z: 8 }}
+              showDelay={300}
+              show={visible}
+              models={[
+                {
+                  ...deviceModels.laptop,
+                  texture: {
+                    ...model.textures[0],
+                    sizes: laptopSizes,
+                  },
+                },
+              ]}
+            />
+          </div>
+        </>
+      )}
       {model.type === 'phone' && (
         <>
           <div className={styles.model} data-device="phone">

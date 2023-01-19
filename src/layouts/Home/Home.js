@@ -7,6 +7,9 @@ import gamestackTexture from 'assets/gamestack-login.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
 import HackSC from 'assets/HackSC-app.jpg';
+import InternLogin from 'assets/InternLogin.png';
+import InternMainPage from 'assets/InternMainPage.png';
+import InternApplied from 'assets/InternApplied.png';
 import { Intro } from 'layouts/Home/Intro';
 import { Profile } from 'layouts/Home/Profile';
 import { ProjectSummary } from 'layouts/Home/ProjectSummary';
@@ -26,10 +29,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -103,6 +107,28 @@ export const Home = () => {
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
+        index={3}
+        title="Intern.io"
+        description={
+          'Up-to-date internship information with save, applied, and favorite features that adresses the lack of valuable internship positions on job sites'
+        }
+        buttonText="View Project"
+        buttonLink="/projects/intern"
+        model={{
+          type: 'laptop2',
+          textures: [
+            {
+              srcSet: [InternMainPage, InternMainPage],
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-3"
+        alternate
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
         index={2}
         title="Wave: Musical Dating"
         description="Interactive dating ios app based on musical taste, personality, and location. Integrated machine learning 
@@ -124,16 +150,16 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-3"
+        id="project-4"
         alternate
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
         index={3}
         title="Checkout my other personal projects here!"
         buttonText="View all personal projects"
         buttonLink="/projects/other_projects"
         model={{
-          type: 'laptop',
+          type: 'laptop2',
           textures: [
             {
               srcSet: [StarlinkMainPage, StarlinkMainPage],
