@@ -1,48 +1,7 @@
-import backgroundSprLarge from 'assets/spr-background-large.jpg';
-import backgroundSprPlaceholder from 'assets/spr-background-placeholder.jpg';
-import imageSprBackgroundVolcanismLarge from 'assets/spr-background-volcanism-large.jpg';
-import imageSprBackgroundVolcanismPlaceholder from 'assets/spr-background-volcanism-placeholder.jpg';
-import imageSprBackgroundVolcanism from 'assets/spr-background-volcanism.jpg';
-import backgroundSpr from 'assets/spr-background.jpg';
-import imageSprComponentsDarkLarge from 'assets/spr-components-dark-large.png';
 import imageSprComponentsDarkPlaceholder from 'assets/spr-components-dark-placeholder.png';
-import imageSprComponentsDark from 'assets/spr-components-dark.png';
-import imageSprComponentsLightLarge from 'assets/spr-components-light-large.png';
 import imageSprComponentsLightPlaceholder from 'assets/spr-components-light-placeholder.png';
-import imageSprComponentsLight from 'assets/spr-components-light.png';
-import imageSprDesignSystemDarkLarge from 'assets/spr-design-system-dark-large.png';
-import imageSprDesignSystemDarkPlaceholder from 'assets/spr-design-system-dark-placeholder.png';
-import imageSprDesignSystemDark from 'assets/spr-design-system-dark.png';
-import imageSprDesignSystemLightLarge from 'assets/spr-design-system-light-large.png';
-import imageSprDesignSystemLightPlaceholder from 'assets/spr-design-system-light-placeholder.png';
-import imageSprDesignSystemLight from 'assets/spr-design-system-light.png';
-import imageSprLessonBuilderDarkLarge from 'assets/spr-lesson-builder-dark-large.jpg';
-import imageSprLessonBuilderDarkPlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
-import imageSprLessonBuilderDark from 'assets/spr-lesson-builder-dark.jpg';
-import imageSprLessonBuilderLightLarge from 'assets/spr-lesson-builder-light-large.jpg';
-import imageSprLessonBuilderLightPlaceholder from 'assets/spr-lesson-builder-light-placeholder.jpg';
-import imageSprLessonBuilderLight from 'assets/spr-lesson-builder-light.jpg';
-import videoSprMotionLarge from 'assets/spr-motion-large.mp4';
-import videoSprMotionPlaceholder from 'assets/spr-motion-placeholder.jpg';
-import videoSprMotion from 'assets/spr-motion.mp4';
-import imageSprSchema1DarkLarge from 'assets/spr-schema-1-dark-large.png';
-import imageSprSchema1DarkPlaceholder from 'assets/spr-schema-1-dark-placeholder.png';
-import imageSprSchema1Dark from 'assets/spr-schema-1-dark.png';
-import imageSprSchema1LightLarge from 'assets/spr-schema-1-light-large.png';
-import imageSprSchema1LightPlaceholder from 'assets/spr-schema-1-light-placeholder.png';
-import imageSprSchema1Light from 'assets/spr-schema-1-light.png';
-import imageSprSchema2DarkLarge from 'assets/spr-schema-2-dark-large.png';
-import imageSprSchema2DarkPlaceholder from 'assets/spr-schema-2-dark-placeholder.png';
-import imageSprSchema2Dark from 'assets/spr-schema-2-dark.png';
-import imageSprSchema2LightLarge from 'assets/spr-schema-2-light-large.png';
-import imageSprSchema2LightPlaceholder from 'assets/spr-schema-2-light-placeholder.png';
-import imageSprSchema2Light from 'assets/spr-schema-2-light.png';
-import imageSprStoryboarderDarkLarge from 'assets/spr-storyboarder-dark-large.png';
-import imageSprStoryboarderDarkPlaceholder from 'assets/spr-storyboarder-dark-placeholder.png';
-import imageSprStoryboarderDark from 'assets/spr-storyboarder-dark.png';
-import imageSprStoryboarderLightLarge from 'assets/spr-storyboarder-light-large.png';
-import imageSprStoryboarderLightPlaceholder from 'assets/spr-storyboarder-light-placeholder.png';
-import imageSprStoryboarderLight from 'assets/spr-storyboarder-light.png';
+import TwitchLogin from 'assets/TwitchLogin.png';
+import StarlinkMainPage from 'assets/StarlinkMainPage.png';
 import { Footer } from 'components/Footer';
 import { Heading } from 'components/Heading';
 import { Image } from 'components/Image';
@@ -86,6 +45,27 @@ const twitchRoles = [
   'RESTful Api',
 ];
 
+const cloudTitle =
+  'Cloud: an primative social network web-application with post management comment functionalitis';
+
+const cloudDescription =
+  'I build an imitation of the facebook/instagram application using web technologies to learn more about social application technologies and try to implement more complex application structure and data-management techniques';
+
+const cloudRoles = ['Go Lang', 'React.js', 'MongoDB', 'Elastic Search', 'GCP'];
+
+const starLinkTitle = 'Star Link: an interactive satalite tracking and locating platform';
+
+const starLinkDescription =
+  'With the rise of SpaceX and Star Link, I became increasingly interested in space satalites and their location. I subsequently built this web app for tracking real-time position of satalites.';
+
+const starLinkRoles = [
+  'React.js',
+  'Frontend UI',
+  'Ant Design',
+  'Geo-Spatial Indexing',
+  'Interactive UI',
+];
+
 export const Others = () => {
   const { themeId } = useTheme();
   const { dispatch } = useAppContext();
@@ -105,221 +85,142 @@ export const Others = () => {
         <OtherProjectHeader
           title={twitchTitle}
           description={twitchDescription}
-          url="https://hacksc.com/"
+          url="https://github.com/JimyZ13/Video-.git"
           roles={twitchRoles}
         />
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>Personalized Recommendation</ProjectSectionHeading>
+            <ProjectSectionHeading>
+              Tech Stack Design and Personalized Recommendation
+            </ProjectSectionHeading>
+            <ProjectSectionText>
+              I designed this web application with horizontal scalability and
+              extendability of functionality in mind. I wanted to be able to extend the
+              capacity and performance of the application to serve the general public
+              while also being able to extend functionalities. I eventually decided to use
+              Spring MVC, React, and MySQL for the main structure of the application.
+              Spring allows for seperation of service logic and database operations. This
+              allos for easy functionality scaling where I can implement key database
+              operations indepedently of service end logic.
+            </ProjectSectionText>
             <ProjectSectionText>
               In the project Video- I used content-based recommendation techiniques to
-              personalize content recommendation for users
+              personalize content recommendation for users. I pulled teh recommendation
+              data from the twitch platform using the official twitch api and encapsulated
+              them using spring controller classes. I then designed a content
+              recommendation algorithm that used tag-based filtering for user-specific
+              content recommendation. Each of the tags that users sets in their profile is
+              used as a point of reference for recommending specific genre of twitch
+              resouces.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
         <ProjectSection light={isDark}>
-          <ProjectSectionContent>
-            <Image
-              key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprComponentsDark, imageSprComponentsDarkLarge]
-                  : [imageSprComponentsLight, imageSprComponentsLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprComponentsDarkPlaceholder
-                  : imageSprComponentsLightPlaceholder
-              }
-              alt={`A set of ${themeId} themed components for the aero design system`}
-              sizes="100vw"
-            />
-            <ProjectTextRow>
-              <SegmentedControl
-                currentIndex={themes.indexOf(themeId)}
-                onChange={handleThemeChange}
-              >
-                <SegmentedControlOption>Dark theme</SegmentedControlOption>
-                <SegmentedControlOption>Light theme</SegmentedControlOption>
-              </SegmentedControl>
-            </ProjectTextRow>
-            <ProjectTextRow>
-              <ProjectSectionHeading>The aero design system</ProjectSectionHeading>
-              <ProjectSectionText>
-                To streamline the design process across designers and engineers for such a
-                large project, it was important to lay the foundations with a strong,
-                flexible design system that could evolve during the product development
-                cycle. This would inform both the aesthetics and user experience across
-                the product itself as well as the website and marketing material.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <Image
-              raised
-              key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprDesignSystemDark, imageSprDesignSystemDarkLarge]
-                  : [imageSprDesignSystemLight, imageSprDesignSystemLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprDesignSystemDarkPlaceholder
-                  : imageSprDesignSystemLightPlaceholder
-              }
-              alt="The homepage of the aero design system docs website linking to principles and components."
-              sizes="100vw"
-            />
-            <ProjectTextRow>
-              <ProjectSectionHeading>Design system docs</ProjectSectionHeading>
-              <ProjectSectionText>
-                A design system is useless if no one knows how to use it, so we put
-                together a comprehensive documentation website to cover principles, ux,
-                accessibility, and component guidelines for designers and engineers
-                working with the system.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-        <ThemeProvider themeId="dark" data-invert>
-          <ProjectSection
-            backgroundOverlayOpacity={0.5}
-            backgroundElement={
-              <Image
-                srcSet={[imageSprBackgroundVolcanism, imageSprBackgroundVolcanismLarge]}
-                placeholder={imageSprBackgroundVolcanismPlaceholder}
-                alt="A dramatic ocean scene with lava forming a new land mass."
-                sizes="100vw"
-              />
+          <Image
+            key={themeId}
+            srcSet={[TwitchLogin, TwitchLogin]}
+            placeholder={
+              isDark
+                ? imageSprComponentsDarkPlaceholder
+                : imageSprComponentsLightPlaceholder
             }
-          >
-            <ProjectSectionColumns width="full">
-              <ProjectSectionContent width="full">
-                <ProjectTextRow width="s">
-                  <ProjectSectionHeading>Motion design</ProjectSectionHeading>
-                  <ProjectSectionText>
-                    Animation was a core principle in making the authoring experience a
-                    more understandable process. Elements animate in ways that indicate
-                    the cause and effect of each interaction to improve the fluidity of
-                    the overall experience.
-                  </ProjectSectionText>
-                </ProjectTextRow>
-              </ProjectSectionContent>
-              <Image
-                raised
-                className={styles.video}
-                srcSet={[
-                  { src: videoSprMotion, width: 1280 },
-                  { src: videoSprMotionLarge, width: 2560 },
-                ]}
-                placeholder={videoSprMotionPlaceholder}
-                alt="A learning designer building and deploying an interactive lesson on volcanism using the app."
-                sizes={`(max-width: ${media.mobile}px) 100vw, 50vw`}
-              />
-            </ProjectSectionColumns>
-          </ProjectSection>
-        </ThemeProvider>
-        <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Encouraging adaptivity</ProjectSectionHeading>
-              <ProjectSectionText>
-                A major part of solving for collaboration was being able to visualize the
-                learner experience in the editor. This was especially beneficial for
-                subject matter experts and instructors need to review and give feedback on
-                the higher level structure without having to dig through all of the
-                adaptivity scenarios screen by screen.
-              </ProjectSectionText>
-            </ProjectTextRow>
-            <Image
-              raised
-              key={themeId}
-              srcSet={
-                isDark
-                  ? [imageSprStoryboarderDark, imageSprStoryboarderDarkLarge]
-                  : [imageSprStoryboarderLight, imageSprStoryboarderLightLarge]
-              }
-              placeholder={
-                isDark
-                  ? imageSprStoryboarderDarkPlaceholder
-                  : imageSprStoryboarderLightPlaceholder
-              }
-              alt="A drag and drop storyboard style editor for creating an adaptive lesson."
-              sizes={`(max-width: ${media.mobile}px) 100vw, 80vw`}
-            />
-          </ProjectSectionContent>
+            alt={`Login page of the web application Video-`}
+            sizes="100vw"
+          />
         </ProjectSection>
         <ProjectSection>
-          <ProjectSectionColumns>
-            <ProjectSectionContent>
-              <ProjectTextRow>
-                <ProjectSectionHeading>
-                  An extensible plugin ecosystem usable by everyone
-                </ProjectSectionHeading>
-                <ProjectSectionText>
-                  The most powerful aspect of the platform is the ability to create custom
-                  plugins for any content, whether it be a degree, course, lesson, screen,
-                  or interactive component. Out of the box these can be made configurable
-                  with minimal effort from developers. Learning designers can then edit
-                  everything using a common configuration interface.
-                </ProjectSectionText>
-              </ProjectTextRow>
-            </ProjectSectionContent>
-            <div className={styles.sidebarImages}>
-              <Image
-                className={styles.sidebarImage}
-                srcSet={
-                  isDark
-                    ? [imageSprSchema2Dark, imageSprSchema2DarkLarge]
-                    : [imageSprSchema2Light, imageSprSchema2LightLarge]
-                }
-                placeholder={
-                  isDark
-                    ? imageSprSchema2DarkPlaceholder
-                    : imageSprSchema2LightPlaceholder
-                }
-                alt="Configuration options for a component."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-              <Image
-                className={styles.sidebarImage}
-                srcSet={
-                  isDark
-                    ? [imageSprSchema1Dark, imageSprSchema1DarkLarge]
-                    : [imageSprSchema1Light, imageSprSchema1LightLarge]
-                }
-                placeholder={
-                  isDark
-                    ? imageSprSchema1DarkPlaceholder
-                    : imageSprSchema1LightPlaceholder
-                }
-                alt="Configuration options for text."
-                sizes={`(max-width: ${media.mobile}px) 50vw, 25vw`}
-              />
-            </div>
-          </ProjectSectionColumns>
+          <ProjectTextRow>
+            <ProjectSectionText>
+              I hosted this application on AWS EC2 for two months before ultimatly rolling
+              back the production version when the aws bill got too high. This application
+              was an exceptional learning opportunity for me as it is the first industrial
+              level full stack application that I built. I learned a lot about the
+              technologies that is behind web applications and was able to create a
+              complete web app. Also having gone through the development cycle of an
+              application and the deployment cycle, this project helped me define a
+              foundation for subsequent applications that I wrote.
+            </ProjectSectionText>
+          </ProjectTextRow>
         </ProjectSection>
 
+        <OtherProjectHeader
+          title={cloudTitle}
+          description={cloudDescription}
+          url="https://github.com/JimyZ13/Cloud-.git"
+          roles={cloudRoles}
+        />
+        <ProjectSection light={isDark}>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Designing Application Structure</ProjectSectionHeading>
+            <ProjectSectionText>
+              Having built an full stack application before, I was able to design the
+              project structure for Cloud with more customization. I choose to explore the
+              more modern and python-like language of Go. Go offered the same versitility
+              and compatibility that Java offered in my previous project but is more
+              light-weight and offers a much simpler syntax and backend structure. I also
+              decided to try to use GCP as opposed to AWS this time and rented a elastic
+              instance on GCP. This allowed me to directly code to the computing instance
+              through SSH and Shell connections.
+            </ProjectSectionText>
+            <ProjectSectionText>
+              In the end, I hosted the backend go application on GCP and the frontend on
+              AWS. I was able to recreate many of the key functionalities of facebook. In
+              particular I was able to implement, post sharing, post commenting, and like
+              post functionalities with Go. Using Go Lang also exposed me to a wider range
+              of OOD principles that Spring did not offer. For example, through the more
+              compact and coupled structure of a Go app, I was able to learn the
+              difference between system design principles and their drawbacks.
+            </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+        <OtherProjectHeader
+          title={starLinkTitle}
+          description={starLinkDescription}
+          url="https://github.com/JimyZ13/starlink.git"
+          roles={starLinkRoles}
+        />
+        <ProjectSection light={isDark}>
+          <Image
+            key={themeId}
+            srcSet={[StarlinkMainPage, StarlinkMainPage]}
+            placeholder={
+              isDark
+                ? imageSprComponentsDarkPlaceholder
+                : imageSprComponentsLightPlaceholder
+            }
+            alt={`Login page of the web application Video-`}
+            sizes="100vw"
+          />
+        </ProjectSection>
         <ProjectSection>
-          <ProjectSectionContent>
-            <ProjectTextRow center centerMobile noMargin>
-              <ProjectSectionHeading>Project outcomes</ProjectSectionHeading>
-              <ProjectSectionText>
-                Ultimately the project was successful after Smart Sparrow and the aero
-                platform were{' '}
-                <Link href="https://www.prnewswire.com/news-releases/pearson-acquires-interactive-learning-technology-from-smart-sparrow-300987673.html">
-                  acquired by Pearson in 2020
-                </Link>{' '}
-                to become a foundation for their next generation learning platform.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Designing a Interactive UI</ProjectSectionHeading>
+            <ProjectSectionText>
+              After building several full stack applications, I feel my backend and
+              database skills have developed signifigantly. However, I sill lacked some
+              key skills in frontend UI design and frontend layouts. I chose this project
+              that is light on the backend to focuse on the design and implementation of
+              the frontend components. I continued to use react since the state hook
+              functions offered a easy way to design responsive UI. I also used design
+              libraries such as antd and react-bootstrap to help me style components and
+              make them interactive. These bundles also compile to vanila javascript in
+              redering which helps to reduce the load of deployment.
+            </ProjectSectionText>
+            <ProjectSectionText>
+              The application mainly uses API routes that are provided by the StarLink
+              official documentations, and other edge functionalities are implemented with
+              javascript controllers and api routes. I used geo-spacial based indexing for
+              features that keep track of location lookup and search functionalities.
+            </ProjectSectionText>
+            <ProjectSectionText>
+              In the end I was able to create an interactive UI that encapsulates key api
+              functionalities that allow easy lookup, tracking, and information search of
+              Star Link satalites. I deployed the application for testing on AWS EC2 but
+              also took down the production image after a few month.
+            </ProjectSectionText>
+          </ProjectTextRow>
         </ProjectSection>
       </ProjectContainer>
-      <Footer />
     </Fragment>
   );
 };

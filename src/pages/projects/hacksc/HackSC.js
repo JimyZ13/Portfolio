@@ -87,7 +87,7 @@ export const HackSC = () => {
               key={themeId}
               srcSet={[HackSCAdminUI, HackSCAdminUI]}
               placeholder={[HackSCAdminUI, HackSCAdminUI]}
-              alt={`A set of ${themeId} themed components for the aero design system`}
+              alt={`HackSC admin ui design`}
               sizes="100vw"
             />
             <ProjectTextRow>
@@ -181,7 +181,6 @@ export const HackSC = () => {
           </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
-      <Footer />
     </Fragment>
   );
 };
