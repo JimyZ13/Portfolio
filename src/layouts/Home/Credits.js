@@ -56,7 +56,7 @@ export const Credits = ({ id, visible, sectionRef }) => {
               <ProjectHeader
                 title={'Credits'}
                 description={
-                  'This web application is built with Next.js 12.1+, the componenets are compartimentalized into layout components and the entire app is redered using partial hydration due to the very very heavy load of the 3d models being redered : ('
+                  'This web application is built with Next.js 12.1+, the componenets are compartimentalized into layout components and the entire app is redered using partial hydration to reduce load time'
                 }
                 roles={roles}
               ></ProjectHeader>

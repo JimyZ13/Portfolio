@@ -111,10 +111,10 @@ export const Jobs = ({ id, visible, sectionRef, ...rest }) => {
               </ProjectSectionHeading>
               <ProjectSectionText>
                 As an Associate Researcher at USC Keck School of Medicine, I am working
-                with
+                with{' '}
                 <Link href="https://keck.usc.edu/faculty-search/kristian-j-carlson/">
                   Professor Carlson
-                </Link>
+                </Link>{' '}
                 on an research project into morphological and physiological indications of
                 postcranial skeleton density distribution. As part of our research
                 initiative, we are developing several projects concurrently to both make
