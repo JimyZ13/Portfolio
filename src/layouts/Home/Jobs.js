@@ -1,12 +1,4 @@
-import profileKatakana from 'assets/katakana-profile.svg?url';
-import profileImgLarge from 'assets/profile-large.jpg';
-import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
-import profileImg from 'assets/profile.jpg';
-import { Button } from 'components/Button';
-import { DecoderText } from 'components/DecoderText';
-import { Divider } from 'components/Divider';
-import { Heading } from 'components/Heading';
-import { Image } from 'components/Image';
+import Keck3 from 'assets/Keck3.png';
 import { Link } from 'components/Link';
 import { Section } from 'components/Section';
 import dynamic from 'next/dynamic';
@@ -129,11 +121,22 @@ export const Jobs = ({ id, visible, sectionRef, ...rest }) => {
                   sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
                 />
               </ProjectSectionText>
+              <ProjectSectionHeading>Project Initiative</ProjectSectionHeading>
               <ProjectSectionText>
                 For the first initiative, I developed an analysis desktop application with
                 Java Swing, Wolfram Mathamatica, and R to automate image cross section
                 generation, fourier transformation of scan cross-sections, and color
                 analysis of density distribution.
+              </ProjectSectionText>
+              <ProjectSectionText>
+                <ProjectSectionContent>
+                  <ProjectImage
+                    raised
+                    srcSet={[Keck3, Keck3]}
+                    placeholder={[Keck3, Keck3]}
+                    sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+                  />
+                </ProjectSectionContent>
               </ProjectSectionText>
               <ProjectSectionText>
                 To imporve the speed and accuracy of image analysis, I also developed a
@@ -145,6 +148,28 @@ export const Jobs = ({ id, visible, sectionRef, ...rest }) => {
                 imporving the accuracy of the neural network hit rate and the machine
                 learning algorithm to further improve the accuracy and efficiency of the
                 research initialtive.
+              </ProjectSectionText>
+              <ProjectSectionHeading>Application Architecture</ProjectSectionHeading>
+              <ProjectSectionText>
+                To automate the analysis process of the cross section generations, I
+                developed an desktop application with Java Swing components and Swing
+                layout design. The Java application acts as an encapsulation that
+                insulates the proccesses that goes on through the mathamatcia kernal in
+                the operating system. The Java application links to the operating system
+                kernal by utilizing JLinks apis provided by wolfram mathamatica and is
+                able to run mathamatica applications as a backend generation server. The
+                application also acts as an user fiendly way of exposing main application
+                functions without needing complex setups.
+              </ProjectSectionText>
+              <ProjectSectionHeading>Project Outcomes</ProjectSectionHeading>
+              <ProjectSectionText>
+                In the end, I was able to construct a automated system that streamlines
+                Image processing through the development of a Java application while
+                maintaining analysis accuracy and precision. I further imporved the
+                workflow by introducing supervised learning that classifies image scans
+                while they are being analyzed. I also developed a more accurate edge
+                detection algorithm that reduces image fuzz around the outside of the bone
+                images which drastically increases data reliability.
               </ProjectSectionText>
             </ProjectSectionContent>
           </ProjectSection>

@@ -29,9 +29,9 @@ import { media } from 'utils/style';
 import styles from './Others.module.css';
 
 const title =
-  'This is an collection of finished projects that are no longer deployed because AWS is so expensive :(';
+  'This is an collection of my personal projects. Most projects are not deployed but source code are all available.';
 const description =
-  'I used many of these projects to learn about new technology and produced industrial level full stack web applications and android applications. Feel free to check out the source codes of each prject on github!';
+  'I used many of these projects to learn about new technology and produced industrial level full stack web applications and android applications. Feel free to check out and use any of the source codes of each prject on github!';
 
 const twitchTitle =
   'Video- : an twitching stream personalization platform with favorite functionality and personalized recommendation';
@@ -125,7 +125,7 @@ export const Others = () => {
                 : imageSprComponentsLightPlaceholder
             }
             alt={`Login page of the web application Video-`}
-            sizes="100vw"
+            sizes="70vw"
           />
         </ProjectSection>
         <ProjectSection>
@@ -189,7 +189,7 @@ export const Others = () => {
                 : imageSprComponentsLightPlaceholder
             }
             alt={`Login page of the web application Video-`}
-            sizes="100vw"
+            sizes="70vw"
           />
         </ProjectSection>
         <ProjectSection>

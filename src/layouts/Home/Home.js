@@ -29,12 +29,14 @@ export const Home = () => {
   const intro = useRef();
   const projectOne = useRef();
   const projectTwo = useRef();
+  const skills = useRef();
+  const jobs = useRef();
   const projectThree = useRef();
   const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -83,8 +85,16 @@ export const Home = () => {
         id="details"
       />
 
-      <Skills id="skills" />
-      <Jobs id="experiences" />
+      <Skills
+        id="skills"
+        sectionRef={skills}
+        visible={visibleSections.includes(skills.current)}
+      />
+      <Jobs
+        id="experiences"
+        sectionRef={jobs}
+        visible={visibleSections.includes(jobs.current)}
+      />
       <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
@@ -105,11 +115,30 @@ export const Home = () => {
           ],
         }}
       />
+
       <ProjectSummary
         id="project-2"
         alternate
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
+        index={3}
+        title="Checkout all my personal projects here!"
+        buttonText="View all personal projects"
+        buttonLink="/projects/other_projects"
+        model={{
+          type: 'laptop2',
+          textures: [
+            {
+              srcSet: [StarlinkMainPage, StarlinkMainPage],
+              placeholder: sliceTexturePlaceholder,
+            },
+          ],
+        }}
+      />
+      <ProjectSummary
+        id="project-3"
+        sectionRef={projectThree}
+        visible={visibleSections.includes(projectThree.current)}
         index={3}
         title="Intern.io"
         description={
@@ -118,54 +147,10 @@ export const Home = () => {
         buttonText="View Project"
         buttonLink="/projects/intern"
         model={{
-          type: 'laptop2',
+          type: 'laptop',
           textures: [
             {
               srcSet: [InternMainPage, InternMainPage],
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-3"
-        alternate
-        sectionRef={projectThree}
-        visible={visibleSections.includes(projectThree.current)}
-        index={2}
-        title="Wave: Musical Dating"
-        description="Interactive dating ios app based on musical taste, personality, and location. Integrated machine learning 
-         models using supervised learning techniques to pair and match users."
-        buttonText="View project"
-        buttonLink="/projects/wave"
-        model={{
-          type: 'phone',
-          textures: [
-            {
-              srcSet: [gamestackTexture, gamestackTextureLarge],
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: [gamestackTexture2, gamestackTexture2Large],
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
-        }}
-      />
-      <ProjectSummary
-        id="project-4"
-        alternate
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={3}
-        title="Checkout my other personal projects here!"
-        buttonText="View all personal projects"
-        buttonLink="/projects/other_projects"
-        model={{
-          type: 'laptop2',
-          textures: [
-            {
-              srcSet: [StarlinkMainPage, StarlinkMainPage],
               placeholder: sliceTexturePlaceholder,
             },
           ],
