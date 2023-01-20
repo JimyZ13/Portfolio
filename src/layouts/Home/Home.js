@@ -6,6 +6,7 @@ import gamestackTexturePlaceholder from 'assets/gamestack-login-placeholder.jpg'
 import gamestackTexture from 'assets/gamestack-login.jpg';
 import sliceTexturePlaceholder from 'assets/slice-app-placeholder.jpg';
 import sprTexturePlaceholder from 'assets/spr-lesson-builder-dark-placeholder.jpg';
+import HackSC2023MainPage from 'assets/HackSC2023MainPage.png';
 import HackSC from 'assets/HackSC-app.jpg';
 import InternLogin from 'assets/InternLogin.png';
 import InternMainPage from 'assets/InternMainPage.png';
@@ -81,7 +82,9 @@ export const Home = () => {
         visible={visibleSections.includes(details.current)}
         id="details"
       />
+
       <Skills id="skills" />
+      <Jobs id="experiences" />
       <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
@@ -96,7 +99,7 @@ export const Home = () => {
           type: 'laptop',
           textures: [
             {
-              srcSet: [HackSC],
+              srcSet: [HackSC2023MainPage],
               placeholder: sprTexturePlaceholder,
             },
           ],
@@ -168,7 +171,6 @@ export const Home = () => {
           ],
         }}
       />
-      <Jobs id="experiences" />
       <Credits id="credits" />
     </div>
   );

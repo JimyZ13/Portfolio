@@ -71,15 +71,90 @@ export const Intern = () => {
             sizes="70vw"
           />
         </ProjectSection>
-        <ProjectSection>
+        <ProjectSection light={isDark}>
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack</ProjectSectionHeading>
             <ProjectSectionText>
               We Designed the web application with scalability in mind. Since our goal is
               to expand to include internships all over the world, our application needs
               to be scalable. For this reason, we choose Spring to handel api calls
-              through RESTful api, and MySQL Database with AWS RDS to dynamically scale
-              our database.
+              through RESTful api, and MySQL Database with Hibernate to dynamically scale
+              our database. By Hibernating our SQL database, we were able to achieve an
+              easy relational mapper that would scale automatically as our database grows.
+              The use of an RESTful api also allow us to handle multiple concurrent
+              requests from clients and scales dynamically.
+            </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+        <ProjectSection>
+          <Image
+            key={themeId}
+            srcSet={[InternApplied, InternApplied]}
+            placeholder={
+              isDark
+                ? imageSprComponentsDarkPlaceholder
+                : imageSprComponentsLightPlaceholder
+            }
+            alt={`Intern Login Page`}
+            sizes="70vw"
+          />
+        </ProjectSection>
+        <ProjectSection light={isDark}>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Frontend and Routing</ProjectSectionHeading>
+            <ProjectSectionText>
+              For an compact frontend UI we used react.js to achieve multiple routing with
+              server side rendering to increase initial load times and application
+              performance. Our routes on the react app are pre-redered on the node server
+              and contents are dynamically updated through partial page-reload. This wroks
+              well since our application do not requrie constant refreshes.
+            </ProjectSectionText>
+            <ProjectSectionText>
+              We also implemented many interactive features on the frontnet UI by using
+              react state hooks to achieve directed animations and routing as users
+              interact with UI components.
+            </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+        <ProjectSection>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Filtering and Searching</ProjectSectionHeading>
+            <ProjectSectionText>
+              In addition to basic database functions, we also implemented personalized
+              filtering functionalities to achieve the applied features and to keep track
+              of jobs that are still available. When a user is logged in, they are also
+              able to proceed to record jobs that they applied to and save them in their
+              personal profile in order to review their applied internship positions.
+            </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+        <ProjectSection light={isDark}>
+          <Image
+            key={themeId}
+            srcSet={[InternMainPage, InternMainPage]}
+            placeholder={
+              isDark
+                ? imageSprComponentsDarkPlaceholder
+                : imageSprComponentsLightPlaceholder
+            }
+            alt={`Intern Login Page`}
+            sizes="70vw"
+          />
+        </ProjectSection>
+        <ProjectSection>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Final Outcomes</ProjectSectionHeading>
+            <ProjectSectionText>
+              This project was a great success as we implmeneted an web application that
+              is both user oriented, and contains job information that are hard to find.
+              We also have a extremly expandable application architecture that allows us
+              to expand in the future.
+            </ProjectSectionText>
+            <ProjectSectionText>
+              In the future, we plan on automating the job listing additions to our
+              database by implementing an simple python web-crawler that retrieves
+              information from the web in a seperate application layer and feed into our
+              database system.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>

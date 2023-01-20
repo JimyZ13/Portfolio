@@ -8,12 +8,12 @@ export const navLinks = [
     pathname: '/#skills',
   },
   {
-    label: 'Projects',
-    pathname: '/#project-1',
-  },
-  {
     label: 'Experiences',
     pathname: '/#experiences',
+  },
+  {
+    label: 'Projects',
+    pathname: '/#project-1',
   },
   {
     label: 'Credits',

@@ -1,6 +1,7 @@
 import HackSCMainPage from 'assets/HackSCMainPage.png';
 import HackSCStorybook from 'assets/HackSCStorybook.png';
 import HackSCAdminUI from 'assets/HackSCAdminUI.png';
+import HackSC2023MainPage from 'assets/HackSC2023MainPage.png';
 import { Footer } from 'components/Footer';
 import { Image } from 'components/Image';
 import { Link } from 'components/Link';
@@ -26,12 +27,14 @@ import styles from './HackSC.module.css';
 
 const title = 'HackSC: an open sourced hackathon platformed built by hackers for hackers';
 const description =
-  'I worked as an engineer to build key functionalities of the platform including sso login functionalities, log-server capabilities, and team matching core functions. I also implemented key deployment functionality and container stadarization.';
+  'This was an very personal organization that I am proud to be part of. As an computer scientist and tech geek, I have always appreciated good oportunities to learn and build coll things and HackSC is a truly great platform for experiencing and building cool projects. I am also proud to have contributed to many components of HackSC as a backend engineer.';
 const roles = [
   'Backend Developer',
   'Backend/Frontend Integration',
   'Front End Development',
   'Deployment and Environment Standarization',
+  'Next, Express, Node',
+  'Node servers, Docker containment',
 ];
 
 export const HackSC = () => {
@@ -55,12 +58,12 @@ export const HackSC = () => {
           url="https://hacksc.com/"
           roles={roles}
         />
-        <ProjectSection padding="top">
+        <ProjectSection>
           <ProjectSectionContent>
             <ProjectImage
               raised
               key={themeId}
-              srcSet={[HackSCMainPage, HackSCMainPage]}
+              srcSet={[HackSC2023MainPage, HackSC2023MainPage]}
               placeholder={[HackSCMainPage, HackSCMainPage]}
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
