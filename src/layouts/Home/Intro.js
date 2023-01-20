@@ -29,7 +29,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
   const words = ['Developer', 'Researcher', 'Engineer', 'Student'];
   const [curText, setCurText] = useState('');
   const period = 600;
-  const [timeBetween, setTimeBetween] = useState(300 - Math.random() * 100);
+  const [timeBetween, setTimeBetween] = useState(200 - Math.random() * 100);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -60,7 +60,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
     } else if (deleting && updatedText === '') {
       setdeleting(false);
       setLoopNum(loopNum + 1);
-      setTimeBetween(500);
+      setTimeBetween(200);
     }
   };
 
@@ -122,7 +122,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 </div>
               </Heading>
             </header>
-            <RouterLink href="/#project-1">
+            <RouterLink href="/#profile">
               <a
                 className={styles.scrollIndicator}
                 data-status={status}
@@ -132,7 +132,7 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
                 <VisuallyHidden>Scroll to projects</VisuallyHidden>
               </a>
             </RouterLink>
-            <RouterLink href="/#project-1">
+            <RouterLink href="/#profile">
               <a
                 className={styles.mobileScrollIndicator}
                 data-status={status}
