@@ -52,37 +52,37 @@ export const HackSC = () => {
     <Fragment>
       <ProjectContainer className="spr">
         <Meta title={title} prefix="Projects" description={description} />
+
         <ProjectHeader
           title={title}
           description={description}
           url="https://hacksc.com/"
           roles={roles}
         />
+
         <ProjectSection>
           <ProjectSectionContent>
-            <ProjectImage
-              raised
+            <Image
               key={themeId}
               srcSet={[HackSC2023MainPage, HackSC2023MainPage]}
-              placeholder={[HackSCMainPage, HackSCMainPage]}
-              sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+              placeholder={[HackSCAdminUI, HackSCAdminUI]}
+              alt={`HackSC admin ui design`}
+              sizes="100vw"
             />
+            <ProjectTextRow>
+              <ProjectSectionHeading>Project Intiative</ProjectSectionHeading>
+              <ProjectSectionText>
+                HackSC was founded in USC with the purpose of providing better, more
+                engaging, and more functional tools for hosting hackathons. With this
+                mission we have hosted three hackathons since 2020 and now aim to open
+                source all the tools that we use in planning and hosting a hackathon. By
+                imporving scalability of our management systems, building an SSO system
+                from scratch, and adding to the evergrowing functionality of our platform,
+                project Hibiscus will provide a accessible platform for anyone to host a
+                hackathon.
+              </ProjectSectionText>
+            </ProjectTextRow>
           </ProjectSectionContent>
-        </ProjectSection>
-        <ProjectSection>
-          <ProjectTextRow>
-            <ProjectSectionHeading>Project Intiative</ProjectSectionHeading>
-            <ProjectSectionText>
-              HackSC was founded in USC with the purpose of providing better, more
-              engaging, and more functional tools for hosting hackathons. With this
-              mission we have hosted three hackathons since 2020 and now aim to open
-              source all the tools that we use in planning and hosting a hackathon. By
-              imporving scalability of our management systems, building an SSO system from
-              scratch, and adding to the evergrowing functionality of our platform,
-              project Hibiscus will provide a accessible platform for anyone to host a
-              hackathon.
-            </ProjectSectionText>
-          </ProjectTextRow>
         </ProjectSection>
         <ProjectSection light={isDark}>
           <ProjectSectionContent>

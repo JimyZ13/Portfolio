@@ -101,18 +101,20 @@ export const Jobs = ({ id, visible, sectionRef, ...rest }) => {
               <ProjectSectionHeading>
                 Associate Researcher @ USC Keck
               </ProjectSectionHeading>
-              <ProjectSectionText>
-                As an Associate Researcher at USC Keck School of Medicine, I am working
-                with{' '}
-                <Link href="https://keck.usc.edu/faculty-search/kristian-j-carlson/">
-                  Professor Carlson
-                </Link>{' '}
-                on an research project into morphological and physiological indications of
-                postcranial skeleton density distribution. As part of our research
-                initiative, we are developing several projects concurrently to both make
-                skeletal analysis automated, and increase the accuracy and precision of
-                cross sectional analysis.
-              </ProjectSectionText>
+              <ProjectSectionContent>
+                <ProjectSectionText>
+                  As an Associate Researcher at USC Keck School of Medicine, I am working
+                  with{' '}
+                  <Link href="https://keck.usc.edu/faculty-search/kristian-j-carlson/">
+                    Professor Carlson
+                  </Link>{' '}
+                  on an research project into morphological and physiological indications
+                  of postcranial skeleton density distribution. As part of our research
+                  initiative, we are developing several projects concurrently to both make
+                  skeletal analysis automated, and increase the accuracy and precision of
+                  cross sectional analysis.
+                </ProjectSectionText>
+              </ProjectSectionContent>
               <ProjectSectionText>
                 <ProjectImage
                   raised
@@ -129,14 +131,12 @@ export const Jobs = ({ id, visible, sectionRef, ...rest }) => {
                 analysis of density distribution.
               </ProjectSectionText>
               <ProjectSectionText>
-                <ProjectSectionContent>
-                  <ProjectImage
-                    raised
-                    srcSet={[Keck3, Keck3]}
-                    placeholder={[Keck3, Keck3]}
-                    sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
-                  />
-                </ProjectSectionContent>
+                <ProjectImage
+                  raised
+                  srcSet={[Keck3, Keck3]}
+                  placeholder={[Keck3, Keck3]}
+                  sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 800px, 1000px`}
+                />
               </ProjectSectionText>
               <ProjectSectionText>
                 To imporve the speed and accuracy of image analysis, I also developed a

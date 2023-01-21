@@ -294,7 +294,7 @@
   max-width: var(--maxWidthL);
   width: 100%;
   display: grid;
-  gap: var(--space4XL);
+  gap: var(--spaceXL);
 
   @media (--mediaLaptop) {
     gap: var(--space3XL);
@@ -314,7 +314,7 @@
 }
 
 .sectionHeading {
-  margin-bottom: 0.6em;
+  margin-bottom: 0.2em;
 }
 
 .sectionText {

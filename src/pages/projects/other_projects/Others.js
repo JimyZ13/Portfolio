@@ -29,7 +29,7 @@ import { media } from 'utils/style';
 import styles from './Others.module.css';
 
 const title =
-  'This is an collection of my personal projects. Most projects are not deployed but source code are all available.';
+  'This is an collection of my personal projects. Most projects are no longer deployed but source code are all available.';
 const description =
   'I used many of these projects to learn about new technology and produced industrial level full stack web applications and android applications. Feel free to check out and use any of the source codes of each prject on github!';
 
@@ -79,8 +79,8 @@ export const Others = () => {
 
   return (
     <Fragment>
-      <ProjectIntro title={title} description={description} />
       <ProjectContainer className="spr">
+        <OtherProjectHeader title={title} description={description} />
         <Meta title={title} prefix="Projects" description={description} />
         <OtherProjectHeader
           title={twitchTitle}
@@ -88,7 +88,7 @@ export const Others = () => {
           url="https://github.com/JimyZ13/Video-.git"
           roles={twitchRoles}
         />
-        <ProjectSection>
+        <ProjectSection light={isDark}>
           <ProjectTextRow>
             <ProjectSectionHeading>
               Tech Stack Design and Personalized Recommendation
@@ -103,33 +103,39 @@ export const Others = () => {
               allos for easy functionality scaling where I can implement key database
               operations indepedently of service end logic.
             </ProjectSectionText>
-            <ProjectSectionText>
-              In the project Video- I used content-based recommendation techiniques to
-              personalize content recommendation for users. I pulled teh recommendation
-              data from the twitch platform using the official twitch api and encapsulated
-              them using spring controller classes. I then designed a content
-              recommendation algorithm that used tag-based filtering for user-specific
-              content recommendation. Each of the tags that users sets in their profile is
-              used as a point of reference for recommending specific genre of twitch
-              resouces.
-            </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
-        <ProjectSection light={isDark}>
-          <Image
-            key={themeId}
-            srcSet={[TwitchLogin, TwitchLogin]}
-            placeholder={
-              isDark
-                ? imageSprComponentsDarkPlaceholder
-                : imageSprComponentsLightPlaceholder
-            }
-            alt={`Login page of the web application Video-`}
-            sizes="70vw"
-          />
-        </ProjectSection>
         <ProjectSection>
+          <ProjectSectionContent>
+            <Image
+              key={themeId}
+              srcSet={[TwitchLogin, TwitchLogin]}
+              placeholder={
+                isDark
+                  ? imageSprComponentsDarkPlaceholder
+                  : imageSprComponentsLightPlaceholder
+              }
+              alt={`Login page of the web application Video-`}
+              sizes="70vw"
+            />
+            <ProjectTextRow>
+              <ProjectSectionHeading>Reccommendation</ProjectSectionHeading>
+              <ProjectSectionText>
+                In the project Video- I used content-based recommendation techiniques to
+                personalize content recommendation for users. I pulled teh recommendation
+                data from the twitch platform using the official twitch api and
+                encapsulated them using spring controller classes. I then designed a
+                content recommendation algorithm that used tag-based filtering for
+                user-specific content recommendation. Each of the tags that users sets in
+                their profile is used as a point of reference for recommending specific
+                genre of twitch resouces.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+        <ProjectSection light={isDark}>
           <ProjectTextRow>
+            <ProjectSectionHeading>Deployment and Outcomes</ProjectSectionHeading>
             <ProjectSectionText>
               I hosted this application on AWS EC2 for two months before ultimatly rolling
               back the production version when the aws bill got too high. This application
@@ -162,14 +168,34 @@ export const Others = () => {
               instance on GCP. This allowed me to directly code to the computing instance
               through SSH and Shell connections.
             </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+        <ProjectSection>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Go Lang</ProjectSectionHeading>
             <ProjectSectionText>
-              In the end, I hosted the backend go application on GCP and the frontend on
-              AWS. I was able to recreate many of the key functionalities of facebook. In
-              particular I was able to implement, post sharing, post commenting, and like
-              post functionalities with Go. Using Go Lang also exposed me to a wider range
-              of OOD principles that Spring did not offer. For example, through the more
-              compact and coupled structure of a Go app, I was able to learn the
+              Go Lang allowed me to explore many OOD principles that were implemented
+              differnetly in Java and allowed me to implement a different style of code.
+              In particular I was able to implement, post sharing, post commenting, and
+              like post functionalities with Go. Using Go Lang also exposed me to a wider
+              range of OOD principles that Spring did not offer. For example, through the
+              more compact and coupled structure of a Go app, I was able to learn the
               difference between system design principles and their drawbacks.
+            </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+        <ProjectSection light={isDark}>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Project Outcomes</ProjectSectionHeading>
+            <ProjectSectionText>
+              This Project was a very sophsiticated one in terms of its backend
+              Architecture and remains one of the few projects that served as a foundation
+              of other team projects. I am currently leading a team to design and
+              implement a online social dating application that draws a lot of inspiration
+              from the backend of Project Cloud. By writing reusable and
+              compartimentalized Go code in this project, I was able to quickly produce a
+              production api for our new project and reduced a lot of the initial setup
+              workload.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -180,45 +206,54 @@ export const Others = () => {
           roles={starLinkRoles}
         />
         <ProjectSection light={isDark}>
-          <Image
-            key={themeId}
-            srcSet={[StarlinkMainPage, StarlinkMainPage]}
-            placeholder={
-              isDark
-                ? imageSprComponentsDarkPlaceholder
-                : imageSprComponentsLightPlaceholder
-            }
-            alt={`Login page of the web application Video-`}
-            sizes="70vw"
-          />
+          <ProjectSectionContent>
+            <Image
+              key={themeId}
+              srcSet={[StarlinkMainPage, StarlinkMainPage]}
+              placeholder={
+                isDark
+                  ? imageSprComponentsDarkPlaceholder
+                  : imageSprComponentsLightPlaceholder
+              }
+              alt={`Login page of the web application Video-`}
+              sizes="70vw"
+            />
+            <ProjectTextRow>
+              <ProjectSectionHeading>Designing a Interactive UI</ProjectSectionHeading>
+              <ProjectSectionText>
+                After building several full stack applications, I feel my backend and
+                database skills have developed signifigantly. However, I sill lacked some
+                key skills in frontend UI design and frontend layouts. I chose this
+                project that is light on the backend to focuse on the design and
+                implementation of the frontend components. I continued to use react since
+                the state hook functions offered a easy way to design responsive UI. I
+                also used design libraries such as antd and react-bootstrap to help me
+                style components and make them interactive. These bundles also compile to
+                vanila javascript in redering which helps to reduce the load of
+                deployment.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
         </ProjectSection>
         <ProjectSection>
-          <ProjectTextRow>
-            <ProjectSectionHeading>Designing a Interactive UI</ProjectSectionHeading>
-            <ProjectSectionText>
-              After building several full stack applications, I feel my backend and
-              database skills have developed signifigantly. However, I sill lacked some
-              key skills in frontend UI design and frontend layouts. I chose this project
-              that is light on the backend to focuse on the design and implementation of
-              the frontend components. I continued to use react since the state hook
-              functions offered a easy way to design responsive UI. I also used design
-              libraries such as antd and react-bootstrap to help me style components and
-              make them interactive. These bundles also compile to vanila javascript in
-              redering which helps to reduce the load of deployment.
-            </ProjectSectionText>
-            <ProjectSectionText>
-              The application mainly uses API routes that are provided by the StarLink
-              official documentations, and other edge functionalities are implemented with
-              javascript controllers and api routes. I used geo-spacial based indexing for
-              features that keep track of location lookup and search functionalities.
-            </ProjectSectionText>
-            <ProjectSectionText>
-              In the end I was able to create an interactive UI that encapsulates key api
-              functionalities that allow easy lookup, tracking, and information search of
-              Star Link satalites. I deployed the application for testing on AWS EC2 but
-              also took down the production image after a few month.
-            </ProjectSectionText>
-          </ProjectTextRow>
+          <ProjectSectionContent>
+            <ProjectTextRow>
+              <ProjectSectionHeading>API Implmentation </ProjectSectionHeading>
+              <ProjectSectionText>
+                The application mainly uses API routes that are provided by the StarLink
+                official documentations, and other edge functionalities are implemented
+                with javascript controllers and api routes. I used geo-spacial based
+                indexing for features that keep track of location lookup and search
+                functionalities.
+              </ProjectSectionText>
+              <ProjectSectionText>
+                In the end I was able to create an interactive UI that encapsulates key
+                api functionalities that allow easy lookup, tracking, and information
+                search of Star Link satalites. I deployed the application for testing on
+                AWS EC2 but also took down the production image after a few month.
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
         </ProjectSection>
       </ProjectContainer>
     </Fragment>
