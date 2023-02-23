@@ -156,6 +156,7 @@ export const Home = () => {
           ],
         }}
       />
+
       <Credits id="credits" />
     </div>
   );

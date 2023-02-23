@@ -10,6 +10,7 @@ import { Meta } from 'components/Meta';
 import { SegmentedControl, SegmentedControlOption } from 'components/SegmentedControl';
 import { ThemeProvider, useTheme } from 'components/ThemeProvider';
 import { useAppContext } from 'hooks';
+import { useEffect } from 'react';
 import {
   ProjectBackground,
   ProjectIntro,
@@ -73,6 +74,15 @@ export const Others = () => {
   const isDark = themeId === 'dark';
   const themes = ['dark', 'light'];
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
+    }
+  }, []);
   const handleThemeChange = index => {
     dispatch({ type: 'setTheme', value: themes[index] });
   };
