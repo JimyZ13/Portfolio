@@ -12,6 +12,7 @@ import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
 import { Fragment, useState } from 'react';
+import cat from 'assets/cat.jpg';
 import { media } from 'utils/style';
 import styles from './Profile.module.css';
 
@@ -71,6 +72,14 @@ export const Profile = ({ id, visible, sectionRef }) => {
           </div>
         )}
       </Transition>
+      <Image
+        reveal
+        delay={100}
+        placeholder={cat}
+        srcSet={[cat, cat]}
+        sizes={`(max-width: ${media.laptop}px) 200vw, 600px`}
+        alt="My very cute cat"
+      />
     </Section>
   );
 };
