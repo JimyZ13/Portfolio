@@ -49,6 +49,9 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
       : fullText.substring(0, curText.length + 1);
 
     setCurText(updatedText);
+    if (updatedText === '') {
+      updatedText = '';
+    }
 
     if (deleting) {
       setTimeBetween(prevTimeBetween => prevTimeBetween / 2);
@@ -102,25 +105,27 @@ export function Intro({ id, sectionRef, disciplines, scrollIndicatorHidden, ...r
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text="Benran Zhang" delay={300} />
               </h1>
-              <Heading level={0} as="h3" className={styles.title}>
-                <span aria-hidden className={styles.row}>
-                  <span
-                    className={styles.word}
-                    data-status={status}
-                    style={cssProps({ delay: tokens.base.durationXS })}
-                  ></span>
-                </span>
-                <div className={styles.row} component="span">
-                  <span
-                    aria-hidden
-                    className={styles.word}
-                    data-status={status}
-                    style={cssProps({ delay: tokens.base.durationL })}
-                  >
-                    {curText}
+              <div style={cssProps({})}>
+                <Heading level={0} as="h3" className={styles.title}>
+                  <span aria-hidden className={styles.row}>
+                    <span
+                      className={styles.word}
+                      data-status={status}
+                      style={cssProps({ delay: tokens.base.durationXS })}
+                    ></span>
                   </span>
-                </div>
-              </Heading>
+                  <div className={styles.row} component="span">
+                    <span
+                      aria-hidden
+                      className={styles.word}
+                      data-status={status}
+                      style={cssProps({ delay: tokens.base.durationL })}
+                    >
+                      {curText == '' ? '\u200C' : curText}
+                    </span>
+                  </div>
+                </Heading>
+              </div>
             </header>
             <RouterLink href="/#profile">
               <a
